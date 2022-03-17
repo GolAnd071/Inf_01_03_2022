@@ -66,18 +66,18 @@ int main(int argc, char* argv[])
     srand(time(NULL));
     std::ofstream fout("test_data.txt");
 
-    for (int n = 1; n < 1000; ++n)
+    for (int n = 1; n < 2000; ++n)
         fout << n << ' ';
     fout << '\n';
     
-    std::pair<unsigned int, unsigned int>* arr = new std::pair<unsigned int, unsigned int>[1001];
-    for (int n = 1; n < 1000; ++n)
+    std::pair<unsigned int, unsigned int>* arr = new std::pair<unsigned int, unsigned int>[2001];
+    for (int n = 1; n < 2000; ++n)
         arr[n] = test(n);
     
-    for (int n = 1; n < 1000; ++n)
+    for (int n = 1; n < 2000; ++n)
         fout << arr[n].first << ' ';
     fout << '\n';
-    for (int n = 1; n < 1000; ++n)
+    for (int n = 1; n < 2000; ++n)
         fout << arr[n].second << ' ';
 }
 
